@@ -93,8 +93,8 @@
   # basic configuration of git, please change to your own
   programs.git = {
     enable = true;
-    userName = "Ryan Yin";
-    userEmail = "xiaoyin_c@qq.com";
+    userName = "Kamil Kordecki";
+    userEmail = "kamil@kordecki.dev";
   };
 
   # This value determines the home Manager release that your
