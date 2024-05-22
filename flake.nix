@@ -2,18 +2,21 @@
   description = "NixOS configuration";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-23.11";
-    # home-manager, used for managing user configuration
+
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
+    nixpkgs-stable.url = "github:nixos/nixpkgs/nixos-23.11";
+
+
     home-manager = {
       url = "github:nix-community/home-manager/release-23.11";
-      # The `follows` keyword in inputs is used for inheritance.
-      # Here, `inputs.nixpkgs` of home-manager is kept consistent with
-      # the `inputs.nixpkgs` of the current flake,
-      # to avoid problems caused by different versions of nixpkgs.
       inputs.nixpkgs.follows = "nixpkgs";
     };
-  };
 
+
+  };
+  
+  
   outputs = inputs@{ nixpkgs, home-manager, ... }: {
     nixosConfigurations = {
       # TODO please change the hostname to your own
@@ -30,11 +33,13 @@
             home-manager.useUserPackages = true;
 
             home-manager.extraSpecialArgs = inputs;
-            home-manager.users.toringen = import ./home.nix;
+            home-manager.users.toringen = import ./home;
           }
         ];
 
       };
     };
   };
+
+
 }
