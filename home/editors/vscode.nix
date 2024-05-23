@@ -8,10 +8,8 @@
     enable = true;
     extensions = with pkgs.vscode-extensions; [
       yzhang.markdown-all-in-one
-      dsznajder.es7-react-js-snippets
       vscode-icons-team.vscode-icons      
       esbenp.prettier-vscode
-      xabikos.JavaScriptSnippets
        
       
       
