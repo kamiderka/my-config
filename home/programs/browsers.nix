@@ -17,6 +17,9 @@
 	{id = "cmeikcgfecnhojcbfapbmpbjgllklcbi";} # Hive AI Detector	      
 	{id = "ponfpcnoihfmfllpaingbgckeeldkhle";} # Enchancer for  YouTube	      
 	{id = "bmanlajnpdncmhfkiccmbgeocgbncfln";} # Slinky Elegancki
+	{id = "dhdgffkkebhmkfjojejmpbldmpobfkfo";} # Tampermonkey
+	# {id = "";} # 
+	# {id = "";} # 
 ];
     };
 
