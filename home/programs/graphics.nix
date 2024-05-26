@@ -5,7 +5,13 @@
 }: {
 
   home.packages = with pkgs; [
-    flameshot # Screenshot tool
+    
+    # Screenshoting tools
+    flameshot 
+    
+    # 2D drawing tools
+    drawio 
+    
   ];
 }
 
