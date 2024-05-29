@@ -4,5 +4,6 @@
     ./git.nix
     ./common.nix
     ./graphics.nix
+    ./office.nix
   ];
 }
