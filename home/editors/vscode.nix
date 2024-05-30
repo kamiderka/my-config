@@ -10,8 +10,7 @@
       yzhang.markdown-all-in-one
       vscode-icons-team.vscode-icons      
       esbenp.prettier-vscode
-      ms-vscode.cpptools       
-      
+      ms-vscode.cpptools-extension-pack      
       
     ];
   };
