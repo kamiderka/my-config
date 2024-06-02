@@ -33,6 +33,9 @@
           jupyter
           ipython
           pandas
+          scikit-learn
+          
+          
           requests
           pyquery
           pyyaml
