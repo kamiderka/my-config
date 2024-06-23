@@ -18,6 +18,7 @@
 	{id = "ponfpcnoihfmfllpaingbgckeeldkhle";} # Enchancer for  YouTube	      
 	{id = "bmanlajnpdncmhfkiccmbgeocgbncfln";} # Slinky Elegancki
 	{id = "dhdgffkkebhmkfjojejmpbldmpobfkfo";} # Tampermonkey
+	{id = "jkbklfkombochacjoeagggbiohipcbaj";} # ESUIT | AdBlocker for Facebook 
 	# {id = "";} # 
 	# {id = "";} # 
 ];
