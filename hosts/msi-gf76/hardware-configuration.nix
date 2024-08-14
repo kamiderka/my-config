@@ -12,6 +12,7 @@
   boot.initrd.kernelModules = [ ];
   boot.kernelModules = [ "kvm-intel" ];
   boot.extraModulePackages = [ ];
+  boot.kernelPackages = pkgs.linuxPackages_6_1;
 
   fileSystems."/" =
     { device = "/dev/disk/by-uuid/e7302beb-c69c-4ee4-8b60-756655bebb43";
@@ -36,4 +37,5 @@
 
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
   hardware.cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
+  hardware.enableAllFirmware = true;
 }
