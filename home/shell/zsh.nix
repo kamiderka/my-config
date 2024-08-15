@@ -9,14 +9,29 @@
     enableCompletion = true;
     enableAutosuggestions = true;
     enableSyntaxHighlighting = true;
+    enableVteIntegration = true;
+
 
     shellAliases = {
       ll = "ls -l";
       rebuild = "sudo nixos-rebuild switch";
     };
 
-    histSize = 10000;
-    histFile = "${config.xdg.dataHome}/zsh/history";
-  };
+    oh-my-zsh = {
+      enable = true;
+      plugins = [ "git" "thefuck" ];
+    };
 
-}
+      initExtra = /*bash*/''
+        HISTFILE="$HOME/.zsh_history"
+        HISTSIZE="10000"
+        SAVEHIST="10000"
+        setopt extendedglob hist_ignore_all_dups
+        unsetopt autocd nomatch
+        bindkey -v
+        ZSH_AUTOSUGGEST_STRATEGY=(history completion)
+        source ${pkgs.zsh-autosuggestions}/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+        eval "$(${pkgs.oh-my-posh}/bin/oh-my-posh init zsh --config ${./theme/takuya.omp.json})"
+      '';
+    };
+  }

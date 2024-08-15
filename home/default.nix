@@ -4,6 +4,7 @@
     imports = [
       ./programs
       ./editors
+      ./shell
     ];
 
     # Home Manager needs a bit of information about you and the
