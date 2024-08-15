@@ -74,6 +74,7 @@ in {
     };
   };
   
+  # zsh
   programs.zsh.enable = true;
 
   # Enable CUPS to print documents.
