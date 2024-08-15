@@ -11,6 +11,7 @@ in {
     isNormalUser = true;
     description = "Toringen";
     extraGroups = [ "networkmanager" "wheel" "audio" ];
+    shell = pkgs.zsh;
   };
 
   nix.settings.trusted-users = [username];
@@ -72,6 +73,8 @@ in {
       emoji = ["Noto Color Emoji"];
     };
   };
+  
+  programs.zsh.enable = true;
 
   # Enable CUPS to print documents.
   services.printing.enable = true;
