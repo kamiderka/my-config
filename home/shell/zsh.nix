@@ -19,7 +19,7 @@
 
     oh-my-zsh = {
       enable = true;
-      plugins = [ "git" "thefuck" ];
+      plugins = [ "git" ];
     };
 
       initExtra = /*bash*/''
@@ -31,7 +31,7 @@
         bindkey -v
         ZSH_AUTOSUGGEST_STRATEGY=(history completion)
         source ${pkgs.zsh-autosuggestions}/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-        eval "$(${pkgs.oh-my-posh}/bin/oh-my-posh init zsh --config ${./theme/takuya.omp.json})"
+        eval "$(${pkgs.oh-my-posh}/bin/oh-my-posh init zsh --config ${./theme/tonybaloney.omp.json})"
       '';
     };
   }
