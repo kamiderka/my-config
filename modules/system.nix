@@ -76,6 +76,12 @@ in {
   
   # zsh
   programs.zsh.enable = true;
+  programs.hyprland = {
+    enable = true;
+    xwayland.enable = true;
+};
+
+
 
   # Enable CUPS to print documents.
   services.printing.enable = true;
@@ -97,13 +103,21 @@ in {
     curl
     brave
     neofetch
-    nnn # terminal file manager    
-  ];
+    nnn # terminal file manager
+
+    swww
+    mako
+    alacritty
+    rofi-wayland
+    waybar
+    networkmanagerapplet
+ ];
 
   # Enable sound with pipewire.
   sound.enable = true;
   hardware.pulseaudio.enable = false;
   security.rtkit.enable = true;
+  security.polkit.enable = true;
   services.pipewire = {
     enable = true;
     alsa.enable = true;
