@@ -7,7 +7,39 @@
 {
   imports =
     [ 
+      ../../modules/bootloader.nix
+      ../../modules/bluetooth.nix
+      # ../../modules/disable-nvidia.nix
+      ../../modules/environment-variables.nix
+      # ../../modules/firewall.nix
+      ../../modules/fonts.nix
+      ../../modules/gc.nix
+      ../../modules/hyprland.nix
+      ../../modules/info-fetchers.nix
+      ../../modules/internationalisation.nix
+      ../../modules/lsp.nix
+      # ../../modules/mac-randomize.nix
+      ../../modules/networking.nix
+      ../../modules/nixpkgs.nix
+      ../../modules/nix-settings.nix
+      ../../modules/nvidia.nix
+      ../../modules/opengl.nix
+      ../../modules/open-ssh.nix
+      ../../modules/printing.nix
+      ../../modules/programming-languages.nix
+      ../../modules/screen.nix
+      # ../../modules/security-services.nix
+      ../../modules/services.nix
+      ../../modules/sound.nix
+      ../../modules/swap.nix
       ../../modules/system.nix
+      ../../modules/terminal-utils.nix
+      ../../modules/theme.nix
+      ../../modules/time.nix
+      # ../../modules/usb.nix
+      ../../modules/utils.nix
+      ../../modules/virtualisation.nix
+
       
       # Include the results of the hardware scan.
       ./hardware-configuration.nix

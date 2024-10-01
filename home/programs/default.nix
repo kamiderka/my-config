@@ -5,5 +5,6 @@
     ./common.nix
     ./graphics.nix
     ./office.nix
+    ./godot.nix
   ];
 }

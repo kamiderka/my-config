@@ -10,8 +10,18 @@ in {
   users.users.toringen = {
     isNormalUser = true;
     description = "Toringen";
-    extraGroups = [ "networkmanager" "wheel" "audio" ];
+    extraGroups = [ "networkmanager" "wheel" "video" "audio" "tss" ];
     shell = pkgs.zsh;
+    packages = with pkgs; [
+      spotify
+      youtube-music
+      discord
+      tdesktop
+      vscodium
+      brave
+    ];
+
+    
   };
 
   nix.settings.trusted-users = [username];
@@ -27,24 +37,6 @@ in {
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
-
-  # Set your time zone.
-  time.timeZone = "Europe/Warsaw";
-
-  # Select internationalisation properties.
-  i18n.defaultLocale = "en_US.UTF-8";
-
-  i18n.extraLocaleSettings = {
-    LC_ADDRESS = "pl_PL.UTF-8";
-    LC_IDENTIFICATION = "pl_PL.UTF-8";
-    LC_MEASUREMENT = "pl_PL.UTF-8";
-    LC_MONETARY = "pl_PL.UTF-8";
-    LC_NAME = "pl_PL.UTF-8";
-    LC_NUMERIC = "pl_PL.UTF-8";
-    LC_PAPER = "pl_PL.UTF-8";
-    LC_TELEPHONE = "pl_PL.UTF-8";
-    LC_TIME = "pl_PL.UTF-8";
-  };
 
   fonts = {
     packages = with pkgs; [
@@ -112,23 +104,5 @@ in {
     waybar
     networkmanagerapplet
  ];
-
-  # Enable sound with pipewire.
-  sound.enable = true;
-  hardware.pulseaudio.enable = false;
-  security.rtkit.enable = true;
-  security.polkit.enable = true;
-  services.pipewire = {
-    enable = true;
-    alsa.enable = true;
-    alsa.support32Bit = true;
-    pulse.enable = true;
-    # If you want to use JACK applications, uncomment this
-    jack.enable = true;
-
-    # use the example session manager (no others are packaged yet so this is enabled by default,
-    # no need to redefine it in your config for now)
-    #media-session.enable = true;
-  };
 
 }

@@ -10,6 +10,8 @@
     hunspell
     hunspellDicts.en_US
     hunspellDicts.pl_PL    
-
+    
+    todoist-electron
+    obsidian
   ];
 }

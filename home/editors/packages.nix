@@ -20,29 +20,29 @@
     lldb
 
 
-    #-- python --#
-    nodePackages.pyright # python language server
-    (python311.withPackages (
-      ps:
-        with ps; [
-          ruff-lsp
-          black # python formatter
-          debugpy
-
-          # my commonly used python packages
-          jupyter
-          ipython
-          pandas
-          scikit-learn
-          
-          
-          requests
-          pyquery
-          pyyaml
-          boto3
-
-        ]
-    ))
+#    #-- python --#
+#    nodePackages.pyright # python language server
+#    (python311.withPackages (
+#      ps:
+#        with ps; [
+#          ruff-lsp
+#          black # python formatter
+#          debugpy
+#
+#          # my commonly used python packages
+#          jupyter
+#          ipython
+#          pandas
+#          scikit-learn
+#          
+#          
+#          requests
+#          pyquery
+#          pyyaml
+#          boto3
+#
+#        ]
+#    ))
 
 
 

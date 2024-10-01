@@ -32,6 +32,7 @@
         ZSH_AUTOSUGGEST_STRATEGY=(history completion)
         source ${pkgs.zsh-autosuggestions}/share/zsh-autosuggestions/zsh-autosuggestions.zsh
         eval "$(${pkgs.oh-my-posh}/bin/oh-my-posh init zsh --config ${./theme/tonybaloney.omp.json})"
+        source ${pkgs.zsh-vi-mode}/share/zsh-vi-mode/zsh-vi-mode.plugin.zsh
       '';
     };
   }
